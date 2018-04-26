@@ -23,6 +23,7 @@ header.top {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 10;
 	width: 100%;
 	min-width: 1175px;
 	display: flex;
@@ -46,7 +47,7 @@ header.top {
 }
 
 .top .logo .logoImage {
-	margin: 0 8px 0 18px;
+	margin: 0 8px 0 10px;
 }
 
 .top .logo .logoText {
@@ -84,16 +85,22 @@ header.top {
 	margin-right: 40px;
 }
 
+.top .navBar>nav>ul>li:last-of-type {
+	margin-right: 80px;
+}
+
 .top .navBar button {
 	color: #008BFF;
 	outline: none;
 	border: none;
-	font-size: 20px;
+	font-size: 30px;
 	background-color: transparent;
 	width: 43px;
 	height: 33px;
-	margin-right: 30px;    transition: all .5s;
+    transition: all .5s;
 	cursor: pointer;
+	position: fixed;
+	right: 10px;
 }
 
 .top .navBar button>img{
@@ -103,7 +110,7 @@ header.top {
 
 .top .navBar button:last-of-type {
 	/*display: none;*/
-	transform: rotateX(90deg) translateX(calc(-100% - 30px));
+	transform: rotateX(90deg);
 }
 
 .top.active .logoText {
@@ -113,6 +120,10 @@ header.top {
 
 .top.active {
 	background: rgba(0,0,0,0);
+}
+
+.top.scrollActive {
+	background: darkseagreen;
 }
 
 .top.active nav {
@@ -125,7 +136,7 @@ header.top {
 }
 
 .top.active button:last-of-type {
-	transform: rotateX(0deg) translateX(calc(-100% - 30px));
+	transform: rotateX(0deg);
 }
 
  

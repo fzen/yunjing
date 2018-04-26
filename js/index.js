@@ -1,12 +1,20 @@
+//$('.top button').on('click',function(){
+//	$('.top').toggleClass('active')
+//})
+
 $('.top button').on('click',function(){
-	$('.top').toggleClass('active')
+	if(window.scrollY!=0){
+		$('.top').toggleClass('scrollActive active')
+	}else {
+		$('.top').toggleClass('active')
+	}
 })
 
 $(window).on('scroll',function(e){
 	if(window.scrollY===0){
 		$('.top').removeClass('active')
 	}else {
-		$('.top').addClass('active')
+		$('.top').addClass('active').removeClass('scrollActive')
 	}
 })
 
