@@ -28,6 +28,8 @@ header.top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background: rgba(0,0,0,.1);
+	transition: all .5s;
 }
 
 .top .logo {
@@ -107,6 +109,10 @@ header.top {
 .top.active .logoText {
 	transform: translateX(-110%);
 	opacity: 0;
+}
+
+.top.active {
+	background: rgba(0,0,0,0);
 }
 
 .top.active nav {
